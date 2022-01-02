@@ -1,0 +1,147 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: linear-gradient(to right, rgb(13, 19, 159), rgb(39, 98, 192));
+	color: white;
+	font-family: 'Roboto', sans-serif;
+}
+
+.cabecera {
+	width: 90%;
+	max-width: 1200px;
+	margin: auto;
+	padding: 0;
+}
+
+.logo {
+	width: 250px;
+	margin-left: 20px;
+	margin-top: 50px;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1200px;
+	margin: auto;
+	padding: 40px 0;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
+
+.titulo {
+	font-size: 24px;
+	padding: 20px 0;
+}
+
+.contenedor-pokemon {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+	border-radius: 10px;
+	min-height: 200px;
+	font-weight: bold;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	background-color:#ffffff;
+}
+
+.card:hover {
+    color: rgb(255, 255, 255);
+}
+
+.textos {
+	height: 100%;
+	opacity: 0%;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h2{
+	text-transform: uppercase;
+	color: #FFD600;
+}
+.card .textos:hover{
+	opacity: 100%;
+	background-image: linear-gradient(to right, rgba(13, 59, 159, .5), rgba(39, 98, 192, .5))/*  url("./img/1.jpg") */;
+	border-radius: 10px;
+	min-height: 200px;
+	padding: 20px;
+	text-shadow: 0.1em 0.1em 0.2em black
+}
+.banner {
+	border-radius: 10px;
+	text-align: center;
+	padding: 20px;
+	background-size: cover;
+	background-position: center center;
+	max-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.banner ul {
+	list-style: none;
+}
+
+.banner ul li {
+	margin: 15px;
+	font-weight: bold;
+	text-shadow: 0.1em 0.1em 0.2em black
+}
+
+.entrenador {
+	color: #FFD600;
+	text-shadow: 0.1em 0.1em 0.2em black
+}
+
+.banner .boton {
+	background: #FFD600;
+	display: block;
+	width: 100%;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	padding: 10px;
+	border: none;
+	border-radius: 100px;
+	font-family: 'Roboto', sans-serif;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+	.contenedor-pokemon {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+}
+
+@media screen and (max-width: 700px) {
+	.contenedor-pokemon {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.contenedor {
+        grid-template-columns: 1fr;
+	}
+
+}
+
+@media screen and (max-width: 410px) {
+	.contenedor-pokemon {
+		grid-template-columns: repeat(1, 1fr);
+	}
+    .contenedor {
+        grid-template-columns: 1fr;
+	}
+}
